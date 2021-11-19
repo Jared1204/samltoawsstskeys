@@ -32,18 +32,12 @@ Open a administrator command prompt and type:
 A symlink will allow you to create a link between the credentials file in your download directory and a linked version of the file inside your .aws folder.
 Allowing you to get new credential files for different aws accounts and have those credentials work immediately with out moving the file to the .aws location
 
-The first part of the command is where you want a linked file to be created
-The second part of the command is the orignal file that you want to be linked to
-
 Open a terminal command prompt and type:
 `ln -s /path/to/original /path/to/symlink`
 
 ## <a name="symlink_linux"></a>Create a symlink to your .aws directory (Windows)
 A symlink will allow you to create a link between the credentials file in your download directory and a linked version of the file inside your .aws folder.
 Allowing you to get new credential files for different aws accounts and have those credentials work immediately with out moving the file to the .aws location
-
-The first part of the command is where you want a linked file to be created
-The second part of the command is the orignal file that you want to be linked to
 
 Open a terminal command prompt and type:
 `ln -s /path/to/file /path/to/symlink`
