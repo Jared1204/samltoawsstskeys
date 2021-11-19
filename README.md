@@ -6,8 +6,9 @@ The Chrome Extension can be downloaded here:
 
 # Table of Contents
 * [Why this Chrome Extension?](#why)
-* [Getting Started](#gettingstarted)
-* [Create a symlink to your .aws directory (for Windows users)](#symlink)
+* [Create a symlink to your .aws directory (Windows)](#symlink_win)
+* [Create a symlink to your .aws directory (Mac)](#symlink_mac)
+* [Create a symlink to your .aws directory (Linux)](#symlink_linux)
 * [Frequently Asked Question](#faq)
 
 ## <a name="why"></a>Why this Chrome Extension?
@@ -17,11 +18,35 @@ You run into trouble as soon as you would like to execute some fancy scripts fro
 
 The Security Token Service (STS) from AWS provides an API action assumeRoleWithSAML. Using the SAML Assertion given by your IDP the Chrome Extension will call this API action to fetch temporary credentials. (AccessKeyId, SecretAccessKey and SessionToken). This way there is no need to create some sort of anonymous user in AWS IAM used for executing scripts. This would be a real security nightmare, since it won't be possible to audit who did what. This Chrome Extension however will make it super easy for you to just use your corporate identity for executing scripts calling AWS API's.
 
-## <a name="gettingstarted"></a>Getting Started
-TODO
+## <a name="symlink_win"></a>Create a symlink to your .aws directory (Windows)
+A symlink will allow you to create a link between the credentials file in your download directory and a linked version of the file inside your .aws folder.
+Allowing you to get new credential files for different aws accounts and have those credentials work immediately with out moving the file to the .aws location
 
-## <a name="symlink"></a>Create a symlink to your .aws directory (for Windows users)
-TODO
+The first part of the command is where you want a linked file to be created
+The second part of the command is the orignal file that you want to be linked to
+
+Open a administrator command prompt and type:
+`mklink C:\Users\{yourName}\.aws\credentials C:\Users\{yourName}\Downloads\credentials`
+
+## <a name="symlink_mac"></a>Create a symlink to your .aws directory (Windows)
+A symlink will allow you to create a link between the credentials file in your download directory and a linked version of the file inside your .aws folder.
+Allowing you to get new credential files for different aws accounts and have those credentials work immediately with out moving the file to the .aws location
+
+The first part of the command is where you want a linked file to be created
+The second part of the command is the orignal file that you want to be linked to
+
+Open a terminal command prompt and type:
+`ln -s /path/to/original /path/to/symlink`
+
+## <a name="symlink_linux"></a>Create a symlink to your .aws directory (Windows)
+A symlink will allow you to create a link between the credentials file in your download directory and a linked version of the file inside your .aws folder.
+Allowing you to get new credential files for different aws accounts and have those credentials work immediately with out moving the file to the .aws location
+
+The first part of the command is where you want a linked file to be created
+The second part of the command is the orignal file that you want to be linked to
+
+Open a terminal command prompt and type:
+`ln -s /path/to/file /path/to/symlink`
 
 ## <a name="faq"></a>FAQ: Frequently Asked Question
 1. Why can I not save file somewhere else?
