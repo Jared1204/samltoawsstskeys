@@ -28,14 +28,14 @@ The second part of the command is the orignal file that you want to be linked to
 Open a administrator command prompt and type:
 `mklink C:\Users\{yourName}\.aws\credentials C:\Users\{yourName}\Downloads\credentials`
 
-## <a name="symlink_mac"></a>Create a symlink to your .aws directory (Windows)
+## <a name="symlink_mac"></a>Create a symlink to your .aws directory (Mac)
 A symlink will allow you to create a link between the credentials file in your download directory and a linked version of the file inside your .aws folder.
 Allowing you to get new credential files for different aws accounts and have those credentials work immediately with out moving the file to the .aws location
 
 Open a terminal command prompt and type:
 `ln -s /path/to/original /path/to/symlink`
 
-## <a name="symlink_linux"></a>Create a symlink to your .aws directory (Windows)
+## <a name="symlink_linux"></a>Create a symlink to your .aws directory (Linux)
 A symlink will allow you to create a link between the credentials file in your download directory and a linked version of the file inside your .aws folder.
 Allowing you to get new credential files for different aws accounts and have those credentials work immediately with out moving the file to the .aws location
 
